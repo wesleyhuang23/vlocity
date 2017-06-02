@@ -9,13 +9,13 @@
 
     <div class="search-container">
         <img src="https://www.alphasoftware.com/documentation/pages/images/icons/faq.svg"/>
-        <input type="text" placeholder="Search">
+        <input type="text" placeholder="Search" ng-model="user.name">
         <div>&#215;</div>
     </div>
     <section>
         <div class="controls">
             <ul>
-                <li ng-repeat="person in people"><a ui-sref="user({name: '{{person.name}}'})">{{person.name}}<span>&#9654;</span></a></li>
+                <li ng-repeat="person in people | filter: user"><a ui-sref="user({name: '{{person.name}}'})">{{person.name}}<span>&#9654;</span></a></li>
             </ul>
         </div>
 
