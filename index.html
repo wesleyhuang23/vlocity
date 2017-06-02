@@ -3,13 +3,19 @@
 
   <head>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
   </head>
 
   <body ng-controller="mainCtrl">
     <h1>Hello from Vlocity!</h1>
-    
-    {{test}}
+
+    <section>
+        <div class="controls">
+            
+        </div>
+        <div class="user-container">
+            <div ui-view></div>
+        </div>
+    </section>
     
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
