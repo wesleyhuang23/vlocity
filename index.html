@@ -9,8 +9,8 @@
 
     <div class="search-container">
         <img src="https://www.alphasoftware.com/documentation/pages/images/icons/faq.svg"/>
-        <input type="text" placeholder="Search" ng-model="user.name">
-        <div>&#215;</div>
+        <input id="search" type="text" placeholder="Search" ng-model="user.name">
+        <div ng-click="clear()">&#215;</div>
     </div>
     <section>
         <div class="controls">

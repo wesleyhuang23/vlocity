@@ -33,6 +33,7 @@ section{
     color: black;
     font-size: 30px;
     margin-left: 20px;
+    cursor: pointer;
 }
 .search-container > img {
     height: 30px;

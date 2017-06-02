@@ -20,6 +20,10 @@ angular.module('app', ['ui.router']).config(function ($urlRouterProvider, $state
   }
 
   getPeople();
+
+  $scope.clear = () => {
+        $scope.user.name = '';
+    }
 })
 .controller('userCtrl', function($scope, $stateParams){
     console.log($stateParams.name);
