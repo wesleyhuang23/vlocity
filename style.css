@@ -19,3 +19,14 @@ section{
     height: 100%;
     border: 1px solid red;
 }
+
+table{
+    display: inline;
+}
+
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
