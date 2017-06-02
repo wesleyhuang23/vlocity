@@ -3,7 +3,7 @@ angular.module('app', ['ui.router']).config(function ($urlRouterProvider, $state
         $stateProvider
             .state('user', {
                 templateUrl: './user.html',
-                url: '/',
+                url: '/:name',
                 controller: 'mainCtrl'
             });
 
@@ -11,10 +11,11 @@ angular.module('app', ['ui.router']).config(function ($urlRouterProvider, $state
 
     })
 
-.controller('mainCtrl', function($scope, mainSvc){
+.controller('mainCtrl', function($scope, mainSvc, $stateParams){
   let getPeople = () => {
       mainSvc.getPeople().then((res) => {
           console.log(res.data.People);
+          $scope.people = res.data.People;
       })
   }
 

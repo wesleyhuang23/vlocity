@@ -10,7 +10,9 @@
 
     <section>
         <div class="controls">
-            
+            <ul>
+                <li ng-repeat="person in people">{{person.name}}</li>
+            </ul>
         </div>
         <div class="user-container">
             <div ui-view></div>
