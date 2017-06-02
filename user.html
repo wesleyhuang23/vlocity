@@ -5,14 +5,20 @@
     <button>Send Message</button>
     <span>{{user.rating}}</span>
     <p>{{user.Description}}</p>
-    <table>
-        <tr ng-repeat="x in user.Likes">
-            <td>{{x}}</td>
-        </tr>
-    </table>
-    <table>
-        <tr ng-repeat="y in user.Dislikes">
-            <td>{{y}}</td>
-        </tr>
-    </table>
+    <div class="tables">
+        <div class="likes">
+            <h3>Likes</h3>
+            <div class="data" ng-repeat="x in user.Likes">
+                <p>{{x}}</p>
+            </div>
+        </div>
+        
+        <div class="dislikes">
+            <h3>Dislikes</h3>
+            <div class="data" ng-repeat="y in user.Dislikes">
+                <p>{{y}}</p>
+            </div>
+        </div>
+        
+    </div>
 </div>

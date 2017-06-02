@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 section{
@@ -20,13 +21,29 @@ section{
     border: 1px solid red;
 }
 
-table{
-    display: inline;
+.tables{
+    display: flex;
+    margin-top: 50px;
+    padding: 30px;
+}
+.tables h3{
+    border: 1px solid #E0D9CC;
 }
 
-table tr:nth-child(odd) {
-  background-color: #f1f1f1;
+.likes{
+    display: inline-block;
+    width: 60%;
 }
-table tr:nth-child(even) {
-  background-color: #ffffff;
+.likes > div:nth-child(odd){
+    background-color: #F8F5F0;
+}
+.dislikes{
+    display: inline-block;
+    width: 40%;
+}
+.dislikes > div:nth-child(odd){
+    background-color: #F8F5F0;
+}
+.data{
+    border: 1px solid #E0D9CC;
 }
