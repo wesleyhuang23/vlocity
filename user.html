@@ -1,10 +1,16 @@
 
 <div class="user-info">
-    <h1>{{user.name}}</h1>
-    <img src="{{user.img}}"/>
-    <button>Send Message</button>
-    <span>{{user.rating}}</span>
-    <p>{{user.Description}}</p>
+     <h1>{{user.name}}</h1>
+    <div class="first-row">
+        <img src="{{user.img}}"/>
+        <div class="right-info">
+            <button>Send Message</button>
+            <div class="rating-container">
+                <span ng-repeat="star in user.stars track by star.id">{{star.icon}}</span>
+            </div>
+        </div>
+    </div>
+    <p class="description">{{user.Description}}</p>
     <div class="tables">
         <div class="likes">
             <h3>Likes</h3>

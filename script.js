@@ -26,6 +26,23 @@ angular.module('app', ['ui.router']).config(function ($urlRouterProvider, $state
     let person = $scope.people.filter((person) => {
         return person.name === $stateParams.name;
     })
+    
+    function starRating(rating){
+        let blankStar = '☆';
+        let star = '★';
+        let ratings = [];
+        for(let i = 0; i < rating; i++){
+            ratings.push({icon: star, id: i});
+        }
+        let x = ratings.length
+        while(x < 5){
+            ratings.push({icon: blankStar, id: x});
+            x++;
+        }
+        
+        person[0].stars = ratings;
+    }
+    starRating(person[0].rating)
     console.log(person);
     $scope.user = person[0];
 })
