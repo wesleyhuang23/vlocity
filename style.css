@@ -6,10 +6,37 @@
 section{
     display: flex;
     width:100vw;
-    height: 80vh;
+    height: 85vh;
     position: absolute;
     bottom: 0px;
     /*border: 1px solid green;*/
+}
+
+.search-container{
+    border-radius: 40px;
+    border:  2px solid #DFD7CA;
+    padding: 10px;
+    color: #E0D9CC;
+    display: flex;
+    align-items: center;
+    width: 400px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.search-container > input {
+    border: none;
+    font-size: 30px;
+    margin-left: 10px;
+    outline: none;
+}
+.search-container > div {
+    color: black;
+    font-size: 30px;
+    margin-left: 20px;
+}
+.search-container > img {
+    height: 30px;
+    width: 30px;
 }
 
 .controls{
@@ -63,9 +90,22 @@ img{
     height: 200px;
     margin-left: 30px;
 }
+.right-info > button{
+    background-color: #3E3F3A;
+    height: 50px;
+    border-radius: 5px;
+    color:white;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+}
+.rating-container > span{
+    font-size: 40px;
+}
 .description{
     border-left: 3px solid #E0D9CC;
     padding: 10px;
+    margin-top: 20px;
 }
 
 .tables{
