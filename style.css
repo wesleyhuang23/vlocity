@@ -14,7 +14,8 @@ section{
     height: 100%;
 }
 
-.usser-container{
+.user-container{
     width: 70%;
     height: 100%;
+    border: 1px solid red;
 }

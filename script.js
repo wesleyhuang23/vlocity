@@ -4,14 +4,14 @@ angular.module('app', ['ui.router']).config(function ($urlRouterProvider, $state
             .state('user', {
                 templateUrl: './user.html',
                 url: '/:name',
-                controller: 'mainCtrl'
+                controller: 'userCtrl'
             });
 
         $urlRouterProvider.otherwise('/');
 
     })
 
-.controller('mainCtrl', function($scope, mainSvc, $stateParams){
+.controller('mainCtrl', function($scope, mainSvc){
   let getPeople = () => {
       mainSvc.getPeople().then((res) => {
           console.log(res.data.People);
@@ -20,6 +20,14 @@ angular.module('app', ['ui.router']).config(function ($urlRouterProvider, $state
   }
 
   getPeople();
+})
+.controller('userCtrl', function($scope, $stateParams){
+    console.log($stateParams.name);
+    let person = $scope.people.filter((person) => {
+        return person.name === $stateParams.name;
+    })
+    console.log(person);
+    $scope.user = person[0];
 })
 
 .service('mainSvc', function($http){
