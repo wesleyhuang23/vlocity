@@ -1,21 +1,17 @@
 // Code goes here
 angular.module('app', ['ui.router']).config(function ($urlRouterProvider, $stateProvider) {
     
-        $stateProvider
-            .state('user', {
-                templateUrl: './user.html',
-                url: '/:name',
-                controller: 'userCtrl'
-            });
+    $stateProvider
+        .state('user', {
+            templateUrl: './user.html',
+            url: '/:name',
+            controller: 'userCtrl'
+        });
 
-        // $urlRouterProvider.otherwise('/');
-
-    })
+})
 
 .controller('mainCtrl', function($scope, mainSvc, $location){
-
-    let people;
-
+    
   let getPeople = () => {
       mainSvc.getPeople().then((res) => {
           console.log(res.data.People);
@@ -25,14 +21,14 @@ angular.module('app', ['ui.router']).config(function ($urlRouterProvider, $state
   }
   getPeople(); //initial data request
 
-  $scope.setContact = function(people){
+  $scope.setContact = function(people){ //seting the first person in the route
       console.log($scope.people);
       $location.url('/' + people[0].name);
   } 
 
   $scope.clear = () => { //cleaing the search field when x is clicked
         $scope.user.name = '';
-    }
+  }
 
 })
 .controller('userCtrl', function($scope, $stateParams){
