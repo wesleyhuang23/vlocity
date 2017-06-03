@@ -8,19 +8,27 @@ angular.module('app', ['ui.router']).config(function ($urlRouterProvider, $state
                 controller: 'userCtrl'
             });
 
-        $urlRouterProvider.otherwise('/');
+        // $urlRouterProvider.otherwise('/');
 
     })
 
-.controller('mainCtrl', function($scope, mainSvc){
+.controller('mainCtrl', function($scope, mainSvc, $location){
+
+    let people;
 
   let getPeople = () => {
       mainSvc.getPeople().then((res) => {
           console.log(res.data.People);
           $scope.people = res.data.People;
+          $scope.setContact($scope.people);
       })
   }
   getPeople(); //initial data request
+
+  $scope.setContact = function(people){
+      console.log($scope.people);
+      $location.url('/' + people[0].name);
+  } 
 
   $scope.clear = () => { //cleaing the search field when x is clicked
         $scope.user.name = '';
