@@ -1,5 +1,6 @@
 // Code goes here
 angular.module('app', ['ui.router']).config(function ($urlRouterProvider, $stateProvider) {
+    
         $stateProvider
             .state('user', {
                 templateUrl: './user.html',
@@ -12,21 +13,22 @@ angular.module('app', ['ui.router']).config(function ($urlRouterProvider, $state
     })
 
 .controller('mainCtrl', function($scope, mainSvc){
+
   let getPeople = () => {
       mainSvc.getPeople().then((res) => {
           console.log(res.data.People);
           $scope.people = res.data.People;
       })
   }
+  getPeople(); //initial data request
 
-  getPeople();
-
-  $scope.clear = () => {
+  $scope.clear = () => { //cleaing the search field when x is clicked
         $scope.user.name = '';
     }
+
 })
 .controller('userCtrl', function($scope, $stateParams){
-    console.log($stateParams.name);
+
     let person = $scope.people.filter((person) => {
         return person.name === $stateParams.name;
     })
@@ -47,10 +49,9 @@ angular.module('app', ['ui.router']).config(function ($urlRouterProvider, $state
         person[0].stars = ratings;
     }
     starRating(person[0].rating)
-    console.log(person);
     $scope.user = person[0];
 })
-
+//service
 .service('mainSvc', function($http){
     this.getPeople = () => {
         return $http({
@@ -61,4 +62,3 @@ angular.module('app', ['ui.router']).config(function ($urlRouterProvider, $state
         })
     }
 })
-//service

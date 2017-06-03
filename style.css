@@ -11,7 +11,7 @@ section{
     bottom: 0px;
     /*border: 1px solid green;*/
 }
-/*info on the right*/
+/*seach bar on the top*/
 .search-container{
     border-radius: 40px;
     border:  2px solid #DFD7CA;
@@ -57,7 +57,7 @@ ul{
 }
 ul > li {
     border: 3px solid #E0D9CC;
-    height: 150px;
+    height: 120px;
     cursor: pointer;
 }
 
@@ -88,6 +88,7 @@ img{
 }
 .first-row{
     display: flex;
+    padding: 10px;
 }
 .right-info{
     display: flex;
