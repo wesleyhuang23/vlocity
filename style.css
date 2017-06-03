@@ -11,7 +11,7 @@ section{
     bottom: 0px;
     /*border: 1px solid green;*/
 }
-
+/*info on the right*/
 .search-container{
     border-radius: 40px;
     border:  2px solid #DFD7CA;
@@ -40,6 +40,7 @@ section{
     width: 30px;
 }
 
+/*user selection on the left*/
 .controls{
     width: 30%;
     height: 100%;
@@ -56,7 +57,7 @@ ul{
 }
 ul > li {
     border: 3px solid #E0D9CC;
-    height: 100px;
+    height: 150px;
     cursor: pointer;
 }
 
@@ -81,6 +82,9 @@ ul> li:hover{
 }
 img{
     display: inline-block;
+    border-radius: 10px;
+    height: 120px;
+    width: 120px;
 }
 .first-row{
     display: flex;
@@ -88,15 +92,16 @@ img{
 .right-info{
     display: flex;
     flex-direction: column;
-    height: 200px;
-    margin-left: 30px;
+    height: 150px;
+    margin-left: 100px;
 }
 .right-info > button{
     background-color: #3E3F3A;
-    height: 50px;
+    height: 80px;
     border-radius: 5px;
     color:white;
     outline: 0;
+    font-size: 20px;
     border: none;
     cursor: pointer;
 }
@@ -106,7 +111,6 @@ img{
 .description{
     border-left: 3px solid #E0D9CC;
     padding: 10px;
-    margin-top: 20px;
 }
 
 .tables{
@@ -115,6 +119,7 @@ img{
 }
 .tables h3{
     border: 1px solid #E0D9CC;
+    padding: 15px;
 }
 
 .likes{
@@ -133,4 +138,5 @@ img{
 }
 .data{
     border: 1px solid #E0D9CC;
+    padding: 15px;
 }
