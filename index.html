@@ -19,12 +19,13 @@
     </div>
 
     <section>
+        <!--list of contacts-->
         <div class="controls">
             <ul>
                 <li ng-repeat="person in people | filter: user"><a ui-sref="user({name: '{{person.name}}'})">{{person.name}}<span>&#9654;</span></a></li>
             </ul>
         </div>
-
+        <!--contact details-->
         <div ui-view class="user-container"></div>
 
     </section>
