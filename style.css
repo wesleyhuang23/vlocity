@@ -40,6 +40,25 @@ section{
     width: 30px;
 }
 
+.login-user{
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    display: flex;
+}
+.login-user > img {
+    height: 80px;
+    width: 80px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+.login-user span{
+    padding-top: 65px;
+}
+.login-user p {
+    padding-top: 60px;
+}
+
 /*user selection on the left*/
 .controls{
     width: 30%;
